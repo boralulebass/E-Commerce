@@ -189,6 +189,34 @@ namespace ECommerce.DataAccessLayer.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("ECommerce.EntityLayer.Concrete.Comment", b =>
+                {
+                    b.Property<int>("CommentId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CommentId"), 1L, 1);
+
+                    b.Property<string>("CommentText")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("CommentId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Comments");
+                });
+
             modelBuilder.Entity("ECommerce.EntityLayer.Concrete.Employee", b =>
                 {
                     b.Property<int>("Id")
@@ -461,6 +489,17 @@ namespace ECommerce.DataAccessLayer.Migrations
                     b.Navigation("ParentCategory");
                 });
 
+            modelBuilder.Entity("ECommerce.EntityLayer.Concrete.Comment", b =>
+                {
+                    b.HasOne("ECommerce.EntityLayer.Concrete.AppUser", "User")
+                        .WithMany("Comments")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("ECommerce.EntityLayer.Concrete.OrderDetail", b =>
                 {
                     b.HasOne("ECommerce.EntityLayer.Concrete.Order", null)
@@ -538,6 +577,11 @@ namespace ECommerce.DataAccessLayer.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("ECommerce.EntityLayer.Concrete.AppUser", b =>
+                {
+                    b.Navigation("Comments");
                 });
 
             modelBuilder.Entity("ECommerce.EntityLayer.Concrete.Category", b =>
