@@ -1,9 +1,9 @@
 # ModaMania E-Ticaret Projesi
-Bu proje, .NetCore7.0 Azure DevOps ve Azure SQL Cloud Database kullanarak grupça yaptığımız bir bitirme projesidir. RabbitMQ, Api, Autofac, Ajax ve jQuery gibi teknolojilere yer verdiğimiz projemizde bir moda e-ticaret sistemini ele aldık. Dinamik yapısını kurduğumuz projemizde, admin ve katalog panelleri bulunmaktadır. Identity kütüphanesini kullanarak oluşturulan kullanıcıların yönetimini sağladık. Ürün, kategori, çalışan ayarlarını düzenleyebileceğimiz admin panelinde fotoğraf yükleme, mail atma, uygulama içi mesajlaşma işlemleri rahatlıkla yapılabilmektedir. Katalog tarafında mail doğrulamalı kayıt olma, giriş yapmış kullanıcı ürüne yorum yapma, ürünleri sepete ekleme, sipariş oluşturma ve profil düzenleme işlemlerini yapabilmektedir.
+Bu proje, .NetCore6.0 Azure DevOps ve Azure SQL Cloud Database kullanarak grupça yaptığımız bir bitirme projesidir. RabbitMQ, Api, Autofac, Ajax ve jQuery gibi teknolojilere yer verdiğimiz projemizde bir moda e-ticaret sistemini ele aldık. Dinamik yapısını kurduğumuz projemizde, admin ve katalog panelleri bulunmaktadır. Identity kütüphanesini kullanarak oluşturulan kullanıcıların yönetimini sağladık. Ürün, kategori, çalışan ayarlarını düzenleyebileceğimiz admin panelinde fotoğraf yükleme, mail atma, uygulama içi mesajlaşma işlemleri rahatlıkla yapılabilmektedir. Katalog tarafında mail doğrulamalı kayıt olma, giriş yapmış kullanıcı ürüne yorum yapma, ürünleri sepete ekleme, sipariş oluşturma ve profil düzenleme işlemlerini yapabilmektedir.
 ## Kullanılan Teknolojiler
 - Azure DevOps 
 - Azure SQL Cloud Database 
-- .Net Core 7.0 
+- .Net Core 6.0 
 - N Tier Architecture
 - Entity Framework 
 - HTML, CSS, BOOTSTRAP
